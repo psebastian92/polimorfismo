@@ -1,24 +1,24 @@
 package Polimorfismo;
 
-public class Rectangulo extends Figura {
+public class Triangulo extends Figura {
 
 	private double base;
 	private double altura;
 
-	public Rectangulo(double base, double altura) {
+	public Triangulo(double base, double altura) {
 		this.base = base;
 		this.altura = altura;
 	}
 
 	@Override
 	public double calcularArea() {
-		return base * altura;
+		return (base * altura) / 2;
 	}
 
 	@Override
 	public void describir() {
-		System.out.println("Soy un rectángulo de " + base + "x" + altura + ". Mi área es "
-				+ String.format("%.2f", calcularArea() ) );
+		System.out.println("Soy un triángulo de base " + base + " y altura " + altura + ". Mi área es "
+				+ String.format("%.2f", calcularArea()));
 	}
 
 	public double getBase() {

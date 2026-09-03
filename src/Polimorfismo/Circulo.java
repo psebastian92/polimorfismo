@@ -2,27 +2,25 @@ package Polimorfismo;
 
 public class Circulo extends Figura {
 
-    // Atributo privado para encapsulamiento
     private double radio;
 
-    // Constructor para inicializar el radio
     public Circulo(double radio) {
         this.radio = radio;
     }
 
-    // Sobrescribimos el método de la clase madre con el cálculo específico
+    // Sobrescribimos con la fórmula específica del círculo.
     @Override
     public double calcularArea() {
         return Math.PI * radio * radio;
     }
 
-    // Getter del radio
-    public double getRadio() {
-        return radio;
+    // Sobrescribimos para que el círculo se presente a su manera.
+    @Override
+    public void describir() {
+        System.out.println("Soy un círculo de radio " + radio
+                + ". Mi área es " + String.format("%.2f", calcularArea()));
     }
 
-    // Setter del radio
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
+    public double getRadio() { return radio; }
+    public void setRadio(double radio) { this.radio = radio; }
 }
